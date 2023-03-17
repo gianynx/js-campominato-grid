@@ -72,6 +72,10 @@ h1 {
     background-color: var(--select_bg);
 }
 
+.header_right button:hover {
+    background-color: var(--h1_color);
+}
+
 /*****************************************************
 CSS main
 *****************************************************/
@@ -79,6 +83,22 @@ CSS main
 main {
     height: calc(100% - 180px);
     background-image: linear-gradient(to right, #70e000, #008000, #006400);
+}
+
+.container {
+    height: 100%;
+    max-width: 900px;
+}
+
+#game {
+    height: 100%;
+    width: 400px;
+}
+
+.square {
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+    border: 1px solid;
 }
 
 /*****************************************************

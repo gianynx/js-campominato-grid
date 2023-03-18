@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper w-100 vh-100">
         <header class="header_footer_bg">
-            <div class="header_footer_container mx-auto d-flex justify-content-between align-items-start">
+            <div class="header_container mx-auto d-flex justify-content-between align-items-start">
                 <div class="header_left pt-3">
                     <img src="./img/campo_minato_logo.png" alt="campo_minato_logo">
                 </div>
@@ -22,25 +22,30 @@
                     <h1 class="fs-1 fw-bold text-uppercase">minesweeper</h1>
                 </div>
                 <div class="header_right">
-                    <select class="form-select mt-4" id="inputGroup">
-                        <option selected>Choose...</option>
-                        <option value="1">Beginner</option>
-                        <option value="2">Intermediate</option>
-                        <option value="3">Expert</option>
-                      </select>
-                      <button class="btn btn-outline-secondary mt-2 mx-4 text-uppercase p-3" type="button">play</button>
+                    <form>
+                        <select class="form-select mt-4" id="inputGroup">
+                            <option selected>Choose...</option>
+                            <option value="1">Beginner</option>
+                            <option value="2">Intermediate</option>
+                            <option value="3">Expert</option>
+                        </select>
+                        <button class="btn btn-outline-secondary mt-2 mx-4 text-uppercase p-3" type="submit">play</button>
+                    </form>
                 </div>
             </div>
         </header>
-        <main>
+        <main class="position-relative">
             <div class="container">
                 <div id="game" class="mx-auto d-flex flex-row flex-wrap grid">
-                    <div class="square d-flex justify-content-center align-items-center">1</div>
+                    <div class="square"></div>
+                </div>
+                <div id="score" class="position-absolute top-50 end-0 translate-middle-y">
+                    <h3>Choose the difficulty and press play!</h3>
                 </div>
             </div>
         </main>
         <footer class="header_footer_bg">
-            <div class="header_footer_container mx-auto d-flex flex-row-reverse pt-3">
+            <div class="footer_container mx-auto d-flex flex-row-reverse pt-3">
                 <span class="fs-5">Made with &hearts; by <a class="text-decoration-none text-dark" href="#">Boolean</a></span>
             </div>
         </footer>

@@ -9,6 +9,7 @@ CSS GENERAL
     --rd_gt_main_color: #70e000;
     --h1_color: #27187e;
     --select_bg: #0000;
+    --score_color: #8d8e90;
 }
 
 body {
@@ -17,10 +18,6 @@ body {
 
 .header_footer_bg {
     background-color: var(--header_footer_color);
-}
-
-.header_footer_container {
-    max-width: 1000px;
 }
 
 /*****************************************************
@@ -43,9 +40,14 @@ header {
     width: 100%;
 }
 
+.header_container {
+    max-width: 1000px;
+}
+
 .header_left {
     height: 100%;
     width: 20%;
+    z-index: 1000;
 }
 
 .header_left img {
@@ -101,10 +103,24 @@ main {
     border: 1px solid;
 }
 
+#score h3 {
+    padding-right: 8rem;
+    font-size: 20px;
+    color: var(--score_color);
+}
+
 /*****************************************************
 CSS footer
 *****************************************************/
 
 footer {
     height: 60px;
+}
+
+.footer_container {
+    max-width: 1200px;
+}
+
+.footer_container span {
+    padding-right: 6rem;
 }

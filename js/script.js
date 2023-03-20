@@ -22,9 +22,6 @@ function drawSquare(index, numSquares) {
     square.style.width = `calc(100% / ${numSquares})`;
     square.style.height = `calc(100% / ${numSquares})`;
     square.style.border = `1px solid`;
-    square.style.display = `flex`;
-    square.style.justifyContent = `center`;
-    square.style.alignItems = `center`;
     square.innerHTML = index;
     return square;
 }
@@ -33,10 +30,13 @@ function drawSquare(index, numSquares) {
 function play(event) {
     event.preventDefault();
     const game = document.getElementById('game');
-    game.innerHTML = ''; // svuotiamo #game ogni volta che l'user clicca sul btn 'play'
+
+    // svuotiamo #game ogni volta che l'user clicca sul btn 'play'
+    game.innerHTML = '';
+
     const level = document.getElementById('level').value;
 
-    // creo la variable 'squareNumbers' a seconda del livello
+    // creo la variable 'squareNumbers' a seconda del grado di difficoltà
     let squareNumbers;
 
     switch (level) {
@@ -59,11 +59,13 @@ function play(event) {
 
         // chiamo la function 'drawSquare' all'interno del loop for
         const square = drawSquare(a, squarePerRow);
-        square.addEventListener('click', function() {
+
+        square.addEventListener('click', safe);
+        function safe() {
             square.classList.add('safe');
-        });
+        }
 
         game.appendChild(square);
 
-        }
+        };
     }
